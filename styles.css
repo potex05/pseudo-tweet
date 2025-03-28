@@ -1,0 +1,393 @@
+        /* 全体の設定 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f8fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* コンテナ */
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 6px;
+        }
+
+        /* ヘッダー */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        /* アカウントアイコン */
+        .header img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .trend-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        .more-icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            fill: rgb(197 199 200);
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            /* margin: 0 10px; */
+            padding: 10px 55px;
+            border: 1px solid #e1e8ed;
+            border-radius: 50px;
+            font-size: 14px;
+            background-color: #f0f2f5;
+            outline: none;
+            text-align: center;
+            user-select: none;
+            /* transition: text-align 0.5s, padding-left 0.5s; */
+        }
+
+         .search-bar:focus {
+            text-align: left;
+            padding-left: 30px;
+        }
+
+        .search-container {
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .search-container svg {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            fill: #657786;
+            margin-left: 66px;
+            /* transition: left 0.5s; */
+        }
+
+        .search-container:focus-within svg {
+            margin-left: 0 !important;
+        }
+        .settings-icon {
+            width: 20px;
+            height: 20px;
+            user-select: none;
+        }
+
+        /* ナビゲーションバー */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            padding: 10px 5px;
+            font-size: 14px;
+            color: #657786;
+            cursor: pointer;
+        }
+        
+        .navbar .active {
+            font-weight: bold;
+            color: #14171a;
+            position: relative;
+        }
+
+       .navbar .active::after {
+           content: "";
+           position: absolute;
+           left: 50%;
+           bottom: 0;
+           width: calc(100% - 10px);
+           height: 2px;
+           background-color: #1da1f2;
+           border-radius: 2px;
+           transform: translateX(-50%);
+        }
+
+        /* トレンドリスト */
+        .trend-container h2 {
+            font-size: 18px;
+            margin: 0px;
+            color: #14171a;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+            padding: 10px 0;
+            transition: border-bottom 0.3s;
+        }
+
+        .trend-container h2.scrolled {
+            border-top: 1px solid #e1e8ed;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        .trend-container {
+            position: relative;
+            z-index: 0;
+        }
+
+        /* 各トレンド */
+        .trend {
+            padding: 0px 0;
+            position: relative;
+            z-index: 1;
+            /* border-bottom: 1px solid #e1e8ed; */
+        }
+
+        .trend:last-child {
+            border-bottom: none;
+        }
+
+        .trend .category {
+            font-size: 12px;
+            color: #657786;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .trend .promoted {
+            font-size: 12px;
+            color: #657786;
+            margin-top: 0px;
+            display: flex;
+            align-items: center;
+        }
+
+       .promoted-icon {
+           width: 12px;
+           height: 12px;
+           fill: #657786; /* アイコンの色をテキストと統一 */
+           margin-right: -128px;
+           margin-top: -1px;
+        }
+
+        .trend h3 {
+            font-size: 16px;
+            margin: 3px 0;
+            color: #14171a;
+        }
+
+        .trend .posts {
+            font-size: 12px;
+            color: #657786;
+            margin-top: 0px;
+        }
+
+        .trend .pr-posts {
+            font-size: 14px;
+            color: #657786;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-top: 0px;"
+        }
+        /* ツイートボタン */
+        .tweet-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            margin-bottom: 40px;
+            background-color: #1da1f2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .tweet-button svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+        .bottom-menu {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            border-top: 1px solid #e1e8ed;
+        }
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            fill: #657786;
+            cursor: pointer;
+        }
+        .menu-icon:hover {
+            fill: #1da1f2;
+        }
+/* ツイート作成モーダル */
+.tweet-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.tweet-modal-content {
+    background: white;
+    width: 388px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: -425px;
+}
+.tweet-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 260px;
+}
+.close {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: gray;
+ }
+.tweet-modal-body {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.tweet-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.tweet-input {
+    width: 100%;
+    height: 100px;
+    border: none;
+    font-size: 16px;
+    margin-top: 3px;
+    resize: none;
+    outline: none;
+}
+.tweet-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    /* margin-left: 268px; */
+    margin-top: -26px;
+}
+.tweet-submit {
+    background: #1da1f2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.tweet-submit {
+    background: #1da1f2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0.5; /* 初期状態では非活性 */
+    pointer-events: none; /* クリックできない */
+}
+
+.tweet-submit.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tweet-notification {
+    position: fixed;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #eaf6fb;
+    border: 1px solid #1da1f2;
+    color: black;
+    padding: 15px;
+    height: 21px;
+    width: 350px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: top 0.5s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.reply-access {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #1da1f2;
+    margin-top: 8px;
+}
+
+.earth-icon {
+    width: 16px;
+    height: 16px;
+    fill: #1da1f2;
+    margin-right: 4px;
+}
+.media-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.media-icon {
+    width: 20px;
+    height: 20px;
+    fill: #1da1f2;
+    cursor: pointer;
+}
+    .draft-button {
+        background: white;
+        color: #1da1f2;
+        font-weight: bold;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .draft-button:hover {
+        color: black;
+    }
