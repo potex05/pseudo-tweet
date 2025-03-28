@@ -66,3 +66,27 @@ document.addEventListener("DOMContentLoaded", function () {
         tweetModal.style.display = "none";
     });
 });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const tweetButton = document.querySelector(".tweet-button");
+        const tweetModal = document.querySelector(".tweet-modal");
+        const closeModal = document.querySelector(".close");
+
+        function openModal(event) {
+            event.preventDefault();
+            tweetModal.style.display = "flex";
+        }
+
+        function closeModalFunc() {
+            tweetModal.style.display = "none";
+        }
+
+        // PC用クリックイベント
+        tweetButton.addEventListener("click", openModal);
+
+        // スマホ用タッチイベント
+        tweetButton.addEventListener("touchstart", openModal);
+
+        // モーダルを閉じる
+        closeModal.addEventListener("click", closeModalFunc);
+    });
