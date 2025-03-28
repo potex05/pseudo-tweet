@@ -392,3 +392,6 @@
     .draft-button:hover {
         color: black;
     }
+body.modal-open {
+    overflow: hidden;
+}
