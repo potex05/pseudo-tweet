@@ -182,10 +182,9 @@
         }
 
        .promoted-icon {
-           width: 12px;
-           height: 12px;
+           width: 14px;
+           height: 14px;
            fill: #657786; /* アイコンの色をテキストと統一 */
-           margin-right: -128px;
            margin-top: -1px;
         }
 
