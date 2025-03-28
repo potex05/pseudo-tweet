@@ -66,3 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
         tweetModal.style.display = "none";
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tweetModal = document.querySelector(".tweet-modal");
+    const openModalButton = document.querySelector(".tweet-button");
+    const closeModalButton = document.querySelector(".close");
+
+    openModalButton.addEventListener("click", function () {
+        tweetModal.style.display = "flex";
+        document.body.classList.add("modal-open");
+    });
+
+    closeModalButton.addEventListener("click", function () {
+        tweetModal.style.display = "none";
+        document.body.classList.remove("modal-open");
+    });
+});
