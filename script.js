@@ -66,3 +66,27 @@ document.addEventListener("DOMContentLoaded", function () {
         tweetModal.style.display = "none";
     });
 });
+
+//ツイートのスマホ対応
+document.addEventListener("DOMContentLoaded", function() {
+    const tweetButton = document.querySelector(".tweet-button");
+    const tweetModal = document.querySelector(".tweet-modal");
+    const closeModal = document.querySelector(".close");
+
+    if (tweetButton && tweetModal && closeModal) {
+        tweetButton.addEventListener("click", function() {
+            tweetModal.style.display = "flex"; // モーダルを表示
+        });
+
+        closeModal.addEventListener("click", function() {
+            tweetModal.style.display = "none"; // モーダルを非表示
+        });
+
+        // モーダル外をタップしたときに閉じる処理
+        tweetModal.addEventListener("click", function(event) {
+            if (event.target === tweetModal) {
+                tweetModal.style.display = "none";
+            }
+        });
+    }
+});
