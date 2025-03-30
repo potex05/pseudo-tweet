@@ -95,7 +95,3 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove("modal-open");
     });
 });
-
-document.querySelector(".tweet-input").addEventListener("focus", function() {
-    document.querySelector(".trend-container").style.height = document.querySelector(".trend-container").offsetHeight + "px";
-});
