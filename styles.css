@@ -395,12 +395,3 @@
 body.modal-open {
     overflow: hidden;
 }
-
-.trend-container {
-    transform: none !important;
-    transition: none !important;
-}
-
-.tweet-input {
-    touch-action: manipulation;
-}
