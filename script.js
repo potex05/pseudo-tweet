@@ -96,18 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const tweetButton = document.querySelector(".tweet-button");
-    const modal = document.querySelector(".tweet-modal");
-    const closeModal = document.querySelector(".close");
-
-    tweetButton.addEventListener("click", function () {
-        modal.style.display = "flex";
-        document.body.classList.add("modal-open"); // モーダルを開く時に適用
-    });
-
-    closeModal.addEventListener("click", function () {
-        modal.style.display = "none";
-        document.body.classList.remove("modal-open"); // モーダルを閉じたら解除
-    });
+document.querySelector(".tweet-input").addEventListener("focus", function() {
+    document.querySelector(".trend-container").style.height = document.querySelector(".trend-container").offsetHeight + "px";
 });
