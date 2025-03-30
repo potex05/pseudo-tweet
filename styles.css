@@ -395,3 +395,8 @@
 body.modal-open {
     overflow: hidden;
 }
+@media (max-width: 768px) {
+    .tweet-modal {
+        background-color: #fff !important;
+    }
+}
