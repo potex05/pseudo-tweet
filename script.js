@@ -82,3 +82,16 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove("modal-open");
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tweetButton = document.querySelector(".tweet-button");
+    const tweetModal = document.querySelector(".tweet-modal");
+    const closeModal = document.querySelector(".close");
+
+    // ツイート送信ボタンの処理
+    const tweetSubmit = document.querySelector(".tweet-submit");
+    tweetSubmit.addEventListener("click", function () {
+        tweetModal.style.display = "none";
+        document.body.classList.remove("modal-open");
+    });
+});
