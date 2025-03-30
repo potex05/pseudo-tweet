@@ -394,4 +394,6 @@
     }
 body.modal-open {
     overflow: hidden;
+    height: 100vh; /* 画面の高さを固定 */
+    touch-action: none; /* スクロール防止 */
 }
