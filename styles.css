@@ -207,6 +207,7 @@
             margin-bottom: 0px;
             margin-top: 0px;"
         }
+
         /* ツイートボタン */
         .tweet-button {
             position: fixed;
@@ -250,6 +251,7 @@
         .menu-icon:hover {
             fill: #1da1f2;
         }
+
 /* ツイート作成モーダル */
 .tweet-modal {
     display: none;
@@ -361,8 +363,8 @@
 }
 
 .earth-icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     fill: #1da1f2;
     margin-right: 4px;
 }
@@ -373,8 +375,8 @@
 }
 
 .media-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     fill: #1da1f2;
     cursor: pointer;
 }
